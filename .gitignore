@@ -3,6 +3,8 @@
 miscellaneous
 notebook
 
+data
+data_prepare
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
