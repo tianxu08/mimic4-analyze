@@ -80,7 +80,7 @@ def read_procedures_table(mimic4_path, itemid = ''):
     print(procedures.columns)
     procedures = procedures[['subject_id', 'hadm_id', 'stay_id', 'starttime', 'endtime', 'itemid', 'value', 'valueuom', 'statusdescription']]
     procedures_iv = procedures[procedures['itemid'] == 225792]
-    print('prodecures: ', procedures_iv.shape[0], "\n",  procedures_iv)
+    # print('prodecures: ', procedures_iv.shape[0], "\n",  procedures_iv)
     return procedures_iv
   
         
