@@ -51,7 +51,7 @@ for subject_dir in tqdm(os.listdir(args.subjects_root_path), desc='Iterating ove
 
     # cleaning and converting to time series
     events = map_itemids_to_variables(events, var_map)
-    print("before clean: \n", events)
+    # print("before clean: \n", events)
     events = clean_events(events)
     #print("after clean: \n", events)
     if events.shape[0] == 0:

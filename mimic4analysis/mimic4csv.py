@@ -86,7 +86,7 @@ def read_procedures_table(mimic4_path, itemid = ''):
         
 
 def read_events_table_by_row(mimic4_path, table):
-    nb_rows = {'chartevents': 329499789, 'labevents': 122103668, 'outputevents': 4457382}
+    nb_rows = {'chartevents': 329499789, 'labevents': 122103668, 'outputevents': 4457382, 'inputevents': 9460659}
 
     reader = csv.DictReader(open(os.path.join(mimic4_path, table.lower() + '.csv'), 'r'))
     for i, row in enumerate(reader):
@@ -236,9 +236,9 @@ def read_events_table_and_break_up_by_subject(mimic4_path, table, output_path,
         data_stats.curr_obs = []
     # finish the current observation
 
-    nb_rows_dict = {'chartevents': 330712484, 'labevents': 27854056, 'outputevents': 4349219}
+    nb_rows_dict = {'chartevents': 330712484, 'labevents': 27854056, 'outputevents': 4349219, 'inputevents': 9460659}
     nb_rows = nb_rows_dict[table.lower()]
-    if table == 'chartevents' or table == 'outputevents':
+    if table == 'chartevents' or table == 'outputevents' or table == 'inputevents':
         mimic4_path = os.path.join(mimic4_path, 'icu')
     elif table == 'labevents':
         mimic4_path = os.path.join(mimic4_path, 'hosp')
@@ -251,7 +251,16 @@ def read_events_table_and_break_up_by_subject(mimic4_path, table, output_path,
         if (items_to_keep is not None) and (row['itemid'] not in items_to_keep):
             continue
 
-        row_out = {'subject_id': row['subject_id'],
+        if table == 'inputevents':
+            row_out = {'subject_id': row['subject_id'],
+                   'hadm_id': row['hadm_id'],
+                   'stay_id': '' if 'stay_id' not in row else row['stay_id'],
+                   'charttime': row['starttime'],
+                   'itemid': row['itemid'],
+                   'value': row['amount'],
+                   'valueuom': row['amountuom']}
+        else:
+            row_out = {'subject_id': row['subject_id'],
                    'hadm_id': row['hadm_id'],
                    'stay_id': '' if 'stay_id' not in row else row['stay_id'],
                    'charttime': row['charttime'],

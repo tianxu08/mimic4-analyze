@@ -8,8 +8,8 @@ from mimic4analysis.mimic4csv import *
 from mimic4analysis.preprocessing import add_hcup_ccs_2015_groups, make_phenotype_label_matrix
 from mimic4analysis.util import dataframe_from_csv
 
-parser = argparse.ArgumentParser(description='Extract per-subject data from MIMIC-III CSV files.')
-parser.add_argument('mimic4_path', type=str, help='Directory containing MIMIC-III CSV files.')
+parser = argparse.ArgumentParser(description='Extract per-subject data from MIMIC-IV CSV files.')
+parser.add_argument('mimic4_path', type=str, help='Directory containing MIMIC-IV CSV files.')
 parser.add_argument('output_path', type=str, help='Directory where per-subject data should be written.')
 parser.add_argument('--event_tables', '-e', type=str, nargs='+', help='Tables from which to read events.',
                     default=['chartevents', 'labevents', 'outputevents', 'inputevents'])
