@@ -203,7 +203,7 @@ def break_up_procedures_by_subject(procedures, output_path, subjects=None):
         procedures[procedures.subject_id == subject_id].sort_values(by=['subject_id'])\
                                                      .to_csv(os.path.join(dn, 'procedures.csv'), index=False)
                                                      
-# table: chartevents', 'labevents', 'outputevents'
+# table: chartevents', 'labevents', 'outputevents', 'inputevents'
 def read_events_table_and_break_up_by_subject(mimic4_path, table, output_path,
                                               items_to_keep=None, subjects_to_keep=None):
     obs_header = ['subject_id', 'hadm_id', 'stay_id', 'charttime', 'itemid', 'value', 'valueuom']

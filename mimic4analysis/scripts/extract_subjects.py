@@ -12,7 +12,7 @@ parser = argparse.ArgumentParser(description='Extract per-subject data from MIMI
 parser.add_argument('mimic4_path', type=str, help='Directory containing MIMIC-III CSV files.')
 parser.add_argument('output_path', type=str, help='Directory where per-subject data should be written.')
 parser.add_argument('--event_tables', '-e', type=str, nargs='+', help='Tables from which to read events.',
-                    default=['chartevents', 'labevents', 'outputevents'])
+                    default=['chartevents', 'labevents', 'outputevents', 'inputevents'])
 parser.add_argument('--phenotype_definitions', '-p', type=str,
                     default=os.path.join(os.path.dirname(__file__), '../resources/hcup_ccs_2015_definitions.yaml'),
                     help='YAML file with phenotype definitions.')
