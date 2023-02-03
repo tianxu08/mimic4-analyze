@@ -233,7 +233,7 @@ Inspiratory Ratio,Inspiratory Ratio,Inspiratory Ratio,ready,,226873,Inspiratory 
 ,,NBP Alarm - Low,,,223752,Non-Invasive Blood Pressure Alarm - Low,mmHg,chartevents,155167,Alarms,,,,metavision,,Numeric,
 ,,NBP Alarm - High,,,223751,Non-Invasive Blood Pressure Alarm - High,mmHg,chartevents,155051,Alarms,,,,metavision,,Numeric,
 ,,Multi Lumen Dressing Occlusive,,,227293,Multi Lumen Dressing Occlusive,,chartevents,144018,Access Lines - Invasive,,,,metavision,,Checkbox,
-Arterial O2 pressure,Arterial O2 pressure,PO2 (Arterial),ready,,220224,Arterial O2 pressure,mmHg,chartevents,140229,Labs,,,,metavision,,Numeric,
+PO2,Arterial O2 pressure,PO2 (Arterial),ready,,220224,Arterial O2 pressure,mmHg,chartevents,140229,Labs,,,,metavision,,Numeric,
 ,,Arterial Base Excess,,,224828,Arterial Base Excess,None,chartevents,140198,Labs,,,,metavision,,Numeric,
 ,,Multi Lumen placed in outside facility,,,226113,Multi Lumen placed in outside facility,,chartevents,140058,Access Lines - Invasive,,,,metavision,,Checkbox,
 ,,Phosphorous,,,225677,Phosphorous,None,chartevents,135440,Labs,,,,metavision,,Numeric,

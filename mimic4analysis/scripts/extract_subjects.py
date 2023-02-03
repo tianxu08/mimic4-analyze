@@ -73,7 +73,7 @@ stays = add_inhospital_mortality_to_icustays(stays)
 stays = filter_icustays_on_age(stays)
 
 if args.verbose:
-    print('REMOVE PATIENTS age < 18:\n\tstay_ids: {}\n\thadm_ids: {}\n\tsubject_ids: {}'.format(stays.stay_id.unique().shape[0],
+    print('REMOVE PATIENTS age < 16:\n\tstay_ids: {}\n\thadm_ids: {}\n\tsubject_ids: {}'.format(stays.stay_id.unique().shape[0],
           stays.hadm_id.unique().shape[0], stays.subject_id.unique().shape[0]))
 
 stays.to_csv(os.path.join(args.output_path, 'all_stays.csv'), index=False)

@@ -77,7 +77,7 @@ def read_icd_diagnoses_table(mimic4_path):
 def read_procedures_table(mimic4_path, itemid = ''):
     procedures = dataframe_from_csv(os.path.join(mimic4_path + "/icu", 'procedureevents.csv'))
     procedures.reset_index(inplace=True)
-    print(procedures.columns)
+    # print(procedures.columns)
     procedures = procedures[['subject_id', 'hadm_id', 'stay_id', 'starttime', 'endtime', 'itemid', 'value', 'valueuom', 'statusdescription']]
     procedures_iv = procedures[procedures['itemid'] == 225792]
     # print('prodecures: ', procedures_iv.shape[0], "\n",  procedures_iv)
@@ -151,7 +151,7 @@ def filter_admissions_on_nb_icustays(stays, min_nb_stays=1, max_nb_stays=1):
     return stays
 
 
-def filter_icustays_on_age(stays, min_age=18, max_age=np.inf):
+def filter_icustays_on_age(stays, min_age=16, max_age=np.inf):
     stays = stays[(stays.age >= min_age) & (stays.age <= max_age)]
     return stays
 
