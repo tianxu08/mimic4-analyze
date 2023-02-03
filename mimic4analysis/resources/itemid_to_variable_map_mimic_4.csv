@@ -154,7 +154,7 @@ Glucose,Glucose (finger stick),,ready,,225664,Glucose finger stick,None,charteve
 Glucose,Glucose (serum),,ready,,220621,Glucose (serum),None,chartevents,155071,Labs,,,,metavision,,Numeric,
 Glucose,Glucose (whole blood),,ready,,226537,Glucose (whole blood),None,chartevents,71057,Labs,,,,metavision,,Numeric,
 HR,Heart Rate,HR,ready,,220045,Heart Rate,bpm,chartevents,2762225,Routine Vital Signs,,,,metavision,,Numeric,
-Height,Height,Height,verify,requires unit conversion or checking,226707,Height,Inch,chartevents,12015,General,,,,metavision,,Numeric,
+Height,Height,Height,ready,requires unit conversion or checking,226707,Height,Inch,chartevents,12015,General,,,,metavision,,Numeric,
 Height,Height (cm),Height (cm),verify,requires unit conversion or checking,226730,Height (cm),cm,chartevents,12015,General,,,,metavision,,Numeric,
 MAP,Mean blood pressure (arterial),ABPm,ready,,220052,Arterial Blood Pressure mean,mmHg,chartevents,1156173,Routine Vital Signs,,,,metavision,,Numeric,
 MAP,Mean blood pressure (arterial),ABPm,ready,,225312,ART BP mean,mmHg,chartevents,87182,Routine Vital Signs,,,,metavision,,Numeric,
