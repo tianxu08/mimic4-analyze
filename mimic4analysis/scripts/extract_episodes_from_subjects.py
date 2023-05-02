@@ -25,6 +25,8 @@ args, _ = parser.parse_known_args()
 
 var_map = read_itemid_to_variable_map(args.variable_map_file) # itemid, VARIABLE, MIMIC_LABEL
 
+print('>>>>>>>> var_map: ', var_map)
+
 variables = var_map.VARIABLE.unique()
 
 for subject_dir in tqdm(os.listdir(args.subjects_root_path), desc='Iterating over subjects'):
